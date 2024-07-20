@@ -6,12 +6,13 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct LockInTasksApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
-        }
+            TasksView()
+        }.modelContainer(for: TaskModel)
     }
 }

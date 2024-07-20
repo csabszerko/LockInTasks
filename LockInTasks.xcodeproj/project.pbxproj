@@ -7,61 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		54E348372C4ACBD10036576A /* LockInTasksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E348362C4ACBD10036576A /* LockInTasksApp.swift */; };
-		54E348392C4ACBD10036576A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E348382C4ACBD10036576A /* ContentView.swift */; };
+		54E348372C4ACBD10036576A /* LockInApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E348362C4ACBD10036576A /* LockInApp.swift */; };
+		54E348392C4ACBD10036576A /* TaskListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E348382C4ACBD10036576A /* TaskListView.swift */; };
 		54E3483B2C4ACBD20036576A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54E3483A2C4ACBD20036576A /* Assets.xcassets */; };
 		54E3483E2C4ACBD20036576A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54E3483D2C4ACBD20036576A /* Preview Assets.xcassets */; };
-		54E348482C4ACBD20036576A /* LockInTasksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E348472C4ACBD20036576A /* LockInTasksTests.swift */; };
-		54E348522C4ACBD20036576A /* LockInTasksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E348512C4ACBD20036576A /* LockInTasksUITests.swift */; };
-		54E348542C4ACBD20036576A /* LockInTasksUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E348532C4ACBD20036576A /* LockInTasksUITestsLaunchTests.swift */; };
+		54E348612C4BE9C70036576A /* testPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E348602C4BE9C70036576A /* testPopupView.swift */; };
+		54E348672C4C20740036576A /* TasksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E348662C4C20740036576A /* TasksView.swift */; };
+		54E348692C4C22950036576A /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E348682C4C22950036576A /* TaskModel.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		54E348442C4ACBD20036576A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 54E3482B2C4ACBD10036576A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 54E348322C4ACBD10036576A;
-			remoteInfo = LockInTasks;
-		};
-		54E3484E2C4ACBD20036576A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 54E3482B2C4ACBD10036576A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 54E348322C4ACBD10036576A;
-			remoteInfo = LockInTasks;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		54E348332C4ACBD10036576A /* LockInTasks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LockInTasks.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		54E348362C4ACBD10036576A /* LockInTasksApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockInTasksApp.swift; sourceTree = "<group>"; };
-		54E348382C4ACBD10036576A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		54E348362C4ACBD10036576A /* LockInApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockInApp.swift; sourceTree = "<group>"; };
+		54E348382C4ACBD10036576A /* TaskListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListView.swift; sourceTree = "<group>"; };
 		54E3483A2C4ACBD20036576A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		54E3483D2C4ACBD20036576A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		54E348432C4ACBD20036576A /* LockInTasksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LockInTasksTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		54E348472C4ACBD20036576A /* LockInTasksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockInTasksTests.swift; sourceTree = "<group>"; };
-		54E3484D2C4ACBD20036576A /* LockInTasksUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LockInTasksUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		54E348512C4ACBD20036576A /* LockInTasksUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockInTasksUITests.swift; sourceTree = "<group>"; };
-		54E348532C4ACBD20036576A /* LockInTasksUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockInTasksUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		54E348602C4BE9C70036576A /* testPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testPopupView.swift; sourceTree = "<group>"; };
+		54E348662C4C20740036576A /* TasksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksView.swift; sourceTree = "<group>"; };
+		54E348682C4C22950036576A /* TaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		54E348302C4ACBD10036576A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		54E348402C4ACBD20036576A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		54E3484A2C4ACBD20036576A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -75,8 +42,6 @@
 			isa = PBXGroup;
 			children = (
 				54E348352C4ACBD10036576A /* LockInTasks */,
-				54E348462C4ACBD20036576A /* LockInTasksTests */,
-				54E348502C4ACBD20036576A /* LockInTasksUITests */,
 				54E348342C4ACBD10036576A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -85,8 +50,6 @@
 			isa = PBXGroup;
 			children = (
 				54E348332C4ACBD10036576A /* LockInTasks.app */,
-				54E348432C4ACBD20036576A /* LockInTasksTests.xctest */,
-				54E3484D2C4ACBD20036576A /* LockInTasksUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -94,8 +57,10 @@
 		54E348352C4ACBD10036576A /* LockInTasks */ = {
 			isa = PBXGroup;
 			children = (
-				54E348362C4ACBD10036576A /* LockInTasksApp.swift */,
-				54E348382C4ACBD10036576A /* ContentView.swift */,
+				54E348622C4C1AEF0036576A /* Other */,
+				54E348642C4C1B160036576A /* ViewModels */,
+				54E348632C4C1AF50036576A /* Models */,
+				54E348652C4C1B460036576A /* Views */,
 				54E3483A2C4ACBD20036576A /* Assets.xcassets */,
 				54E3483C2C4ACBD20036576A /* Preview Content */,
 			);
@@ -110,21 +75,37 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		54E348462C4ACBD20036576A /* LockInTasksTests */ = {
+		54E348622C4C1AEF0036576A /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				54E348472C4ACBD20036576A /* LockInTasksTests.swift */,
+				54E348362C4ACBD10036576A /* LockInApp.swift */,
 			);
-			path = LockInTasksTests;
+			path = Other;
 			sourceTree = "<group>";
 		};
-		54E348502C4ACBD20036576A /* LockInTasksUITests */ = {
+		54E348632C4C1AF50036576A /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				54E348512C4ACBD20036576A /* LockInTasksUITests.swift */,
-				54E348532C4ACBD20036576A /* LockInTasksUITestsLaunchTests.swift */,
+				54E348682C4C22950036576A /* TaskModel.swift */,
 			);
-			path = LockInTasksUITests;
+			path = Models;
+			sourceTree = "<group>";
+		};
+		54E348642C4C1B160036576A /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		54E348652C4C1B460036576A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				54E348602C4BE9C70036576A /* testPopupView.swift */,
+				54E348382C4ACBD10036576A /* TaskListView.swift */,
+				54E348662C4C20740036576A /* TasksView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,42 +128,6 @@
 			productReference = 54E348332C4ACBD10036576A /* LockInTasks.app */;
 			productType = "com.apple.product-type.application";
 		};
-		54E348422C4ACBD20036576A /* LockInTasksTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 54E3485A2C4ACBD20036576A /* Build configuration list for PBXNativeTarget "LockInTasksTests" */;
-			buildPhases = (
-				54E3483F2C4ACBD20036576A /* Sources */,
-				54E348402C4ACBD20036576A /* Frameworks */,
-				54E348412C4ACBD20036576A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				54E348452C4ACBD20036576A /* PBXTargetDependency */,
-			);
-			name = LockInTasksTests;
-			productName = LockInTasksTests;
-			productReference = 54E348432C4ACBD20036576A /* LockInTasksTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		54E3484C2C4ACBD20036576A /* LockInTasksUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 54E3485D2C4ACBD20036576A /* Build configuration list for PBXNativeTarget "LockInTasksUITests" */;
-			buildPhases = (
-				54E348492C4ACBD20036576A /* Sources */,
-				54E3484A2C4ACBD20036576A /* Frameworks */,
-				54E3484B2C4ACBD20036576A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				54E3484F2C4ACBD20036576A /* PBXTargetDependency */,
-			);
-			name = LockInTasksUITests;
-			productName = LockInTasksUITests;
-			productReference = 54E3484D2C4ACBD20036576A /* LockInTasksUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -195,14 +140,6 @@
 				TargetAttributes = {
 					54E348322C4ACBD10036576A = {
 						CreatedOnToolsVersion = 15.4;
-					};
-					54E348422C4ACBD20036576A = {
-						CreatedOnToolsVersion = 15.4;
-						TestTargetID = 54E348322C4ACBD10036576A;
-					};
-					54E3484C2C4ACBD20036576A = {
-						CreatedOnToolsVersion = 15.4;
-						TestTargetID = 54E348322C4ACBD10036576A;
 					};
 				};
 			};
@@ -220,8 +157,6 @@
 			projectRoot = "";
 			targets = (
 				54E348322C4ACBD10036576A /* LockInTasks */,
-				54E348422C4ACBD20036576A /* LockInTasksTests */,
-				54E3484C2C4ACBD20036576A /* LockInTasksUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -236,20 +171,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		54E348412C4ACBD20036576A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		54E3484B2C4ACBD20036576A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -257,42 +178,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54E348392C4ACBD10036576A /* ContentView.swift in Sources */,
-				54E348372C4ACBD10036576A /* LockInTasksApp.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		54E3483F2C4ACBD20036576A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				54E348482C4ACBD20036576A /* LockInTasksTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		54E348492C4ACBD20036576A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				54E348522C4ACBD20036576A /* LockInTasksUITests.swift in Sources */,
-				54E348542C4ACBD20036576A /* LockInTasksUITestsLaunchTests.swift in Sources */,
+				54E348392C4ACBD10036576A /* TaskListView.swift in Sources */,
+				54E348372C4ACBD10036576A /* LockInApp.swift in Sources */,
+				54E348692C4C22950036576A /* TaskModel.swift in Sources */,
+				54E348612C4BE9C70036576A /* testPopupView.swift in Sources */,
+				54E348672C4C20740036576A /* TasksView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		54E348452C4ACBD20036576A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 54E348322C4ACBD10036576A /* LockInTasks */;
-			targetProxy = 54E348442C4ACBD20036576A /* PBXContainerItemProxy */;
-		};
-		54E3484F2C4ACBD20036576A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 54E348322C4ACBD10036576A /* LockInTasks */;
-			targetProxy = 54E3484E2C4ACBD20036576A /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		54E348552C4ACBD20036576A /* Debug */ = {
@@ -419,6 +313,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"LockInTasks/Preview Content\"";
@@ -428,8 +323,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -448,6 +342,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"LockInTasks/Preview Content\"";
@@ -457,8 +352,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -469,82 +363,6 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		54E3485B2C4ACBD20036576A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7N5WSQ6GZR;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.csabszerko.LockInTasksTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LockInTasks.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LockInTasks";
-			};
-			name = Debug;
-		};
-		54E3485C2C4ACBD20036576A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7N5WSQ6GZR;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.csabszerko.LockInTasksTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LockInTasks.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LockInTasks";
-			};
-			name = Release;
-		};
-		54E3485E2C4ACBD20036576A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7N5WSQ6GZR;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.csabszerko.LockInTasksUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = LockInTasks;
-			};
-			name = Debug;
-		};
-		54E3485F2C4ACBD20036576A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7N5WSQ6GZR;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.csabszerko.LockInTasksUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = LockInTasks;
 			};
 			name = Release;
 		};
@@ -565,24 +383,6 @@
 			buildConfigurations = (
 				54E348582C4ACBD20036576A /* Debug */,
 				54E348592C4ACBD20036576A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		54E3485A2C4ACBD20036576A /* Build configuration list for PBXNativeTarget "LockInTasksTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				54E3485B2C4ACBD20036576A /* Debug */,
-				54E3485C2C4ACBD20036576A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		54E3485D2C4ACBD20036576A /* Build configuration list for PBXNativeTarget "LockInTasksUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				54E3485E2C4ACBD20036576A /* Debug */,
-				54E3485F2C4ACBD20036576A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
