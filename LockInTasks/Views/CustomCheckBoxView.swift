@@ -7,12 +7,17 @@
 
 import SwiftUI
 
-struct CustomCheckBoxView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+struct CustomCheckBoxView: ToggleStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        HStack {
+            configuration.label
+            Spacer()
+            Image(systemName: configuration.isOn ? "checkmark.square.fill" : "square")
+            //                .resizable()
+            //                .frame(width: 20, height: 20)
+            //                .onTapGesture {
+            //                    configuration.isOn.toggle()
+            //                }
+        }
     }
-}
-
-#Preview {
-    CustomCheckBoxView()
 }

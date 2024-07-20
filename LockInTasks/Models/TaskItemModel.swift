@@ -9,7 +9,7 @@ import Foundation
 import SwiftData
 
 @Model
-class TaskModel : Identifiable{
+class TaskItemModel : Identifiable{
     
     var id: UUID
     var title: String

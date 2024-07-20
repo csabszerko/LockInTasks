@@ -8,44 +8,56 @@
 import SwiftUI
 import SwiftData
 
-struct testPopupView: View {
+struct PopupView: View {
     @Binding var isPresented: Bool
     @State private var firstInput: String = ""
     @State private var secondInput: String  = ""
     
     @Environment(\.modelContext) private var context
+    private var taskOperations: TaskOperations {
+        TaskOperations(context: context)
+    }
     
     var body: some View {
         VStack {
             Text("what do you need to get done?")
-                .font(.headline)
+                .font(.headline).padding()
             
             TextField("title", text: $firstInput)
                 .padding()
-                .overlay(
-                    RoundedRectangle(cornerRadius: 10)
-                        .stroke(Color.gray, lineWidth: 1)
-                )
+                .textFieldStyle(DefaultTextFieldStyle())
+            //                .overlay(
+            //                    RoundedRectangle(cornerRadius: 10)
+            //                        .stroke(Color.gray, lineWidth: 1)
+            //                )
+            TextField("description", text: $secondInput)
+                .padding()
+                .textFieldStyle(DefaultTextFieldStyle())
+            //                .overlay(
+            //                    RoundedRectangle(cornerRadius: 10)
+            //                        .stroke(Color.gray, lineWidth: 1)
+            //                )
             
-            TextEditor(text: $secondInput)
-                .padding(10)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 10)
-                        .stroke(Color.gray, lineWidth: 1)
-                )
-                .frame(height: 200) // Adjust the height as needed
+            //            TextEditor(text: $secondInput)
+            //                .padding(10)
+            //                .overlay(
+            //                    RoundedRectangle(cornerRadius: 10)
+            //                        .stroke(Color.gray, lineWidth: 1)
+            //                )
+            //                .frame(height: 100)
             
             Text({
                 let formatter = DateFormatter()
-                formatter.dateFormat = "EEEE, MMMM d, yyyy" // Custom format with day of the week
+                formatter.dateFormat = "EEEE, MMMM d, yyyy"
                 return formatter.string(from: Date())
             }())
             .padding()
             
             HStack{
                 Button(action: {
-                    print("First Input: \(self.firstInput)")
-                    print("Second Input: \(self.secondInput)")
+                    withAnimation{
+                        taskOperations.addTask(title: self.firstInput, description: self.secondInput)
+                    }
                     self.isPresented = false
                 }){
                     Text("Submit")
@@ -56,7 +68,7 @@ struct testPopupView: View {
                     self.isPresented = false
                 }) {
                     Text("Cancel")
-                    .foregroundColor(.red)
+                        .foregroundColor(.red)
                 }
                 .padding()
             }
@@ -65,5 +77,5 @@ struct testPopupView: View {
 }
 
 #Preview {
-    testPopupView(isPresented: .constant(true))
+    PopupView(isPresented: .constant(true))
 }

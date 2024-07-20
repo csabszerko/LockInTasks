@@ -6,3 +6,9 @@
 //
 
 import Foundation
+import SwiftData
+
+class TaskListController: ObservableObject{
+    
+    
+}
