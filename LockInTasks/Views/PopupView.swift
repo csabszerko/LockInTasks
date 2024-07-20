@@ -6,15 +6,18 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct testPopupView: View {
     @Binding var isPresented: Bool
-    @State private var firstInput = ""
-    @State private var secondInput = ""
+    @State private var firstInput: String = ""
+    @State private var secondInput: String  = ""
+    
+    @Environment(\.modelContext) private var context
     
     var body: some View {
         VStack {
-            Text("what's your excuse?")
+            Text("what do you need to get done?")
                 .font(.headline)
             
             TextField("title", text: $firstInput)
@@ -23,7 +26,7 @@ struct testPopupView: View {
                     RoundedRectangle(cornerRadius: 10)
                         .stroke(Color.gray, lineWidth: 1)
                 )
-                            
+            
             TextEditor(text: $secondInput)
                 .padding(10)
                 .overlay(
@@ -33,18 +36,18 @@ struct testPopupView: View {
                 .frame(height: 200) // Adjust the height as needed
             
             Text({
-                            let formatter = DateFormatter()
-                            formatter.dateFormat = "EEEE, MMMM d, yyyy" // Custom format with day of the week
-                            return formatter.string(from: Date())
-                        }())
-                        .padding()
+                let formatter = DateFormatter()
+                formatter.dateFormat = "EEEE, MMMM d, yyyy" // Custom format with day of the week
+                return formatter.string(from: Date())
+            }())
+            .padding()
             
             HStack{
                 Button(action: {
                     print("First Input: \(self.firstInput)")
                     print("Second Input: \(self.secondInput)")
                     self.isPresented = false
-                }) {
+                }){
                     Text("Submit")
                 }
                 .padding()
@@ -53,7 +56,7 @@ struct testPopupView: View {
                     self.isPresented = false
                 }) {
                     Text("Cancel")
-                        .foregroundColor(.red)
+                    .foregroundColor(.red)
                 }
                 .padding()
             }
