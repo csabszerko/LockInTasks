@@ -23,29 +23,7 @@ struct TasksView: View {
             NavigationStack{
                 List{
                     ForEach (tasks){ task in
-                        if !task.isCompleted {
-                            DisclosureGroup(
-                                content: { Text(task.desc) },
-                                label: { Text(task.title) }
-                            )
-                            .swipeActions{
-                                Button(action: {
-                                    withAnimation(.bouncy){
-                                        task.isCompleted = true
-                                    }
-                                }, label: {
-                                    Image(systemName: "checkmark")
-                                })
-                                .tint(.green)
-                                
-                                NavigationLink(
-                                    destination: TaskEditorView(task: task),
-                                    label: {
-                                        Image(systemName: "pencil")
-                                    }
-                                )
-                            }
-                        }
+                        TaskRowView(task: task)
                     }
                 }
                 .toolbar{
