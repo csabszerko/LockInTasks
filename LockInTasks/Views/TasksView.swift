@@ -24,11 +24,9 @@ struct TasksView: View {
                 List{
                     ForEach (tasks){ task in
                         if !task.isCompleted {
-                            NavigationLink(
-                                destination: TaskEditorView(task: task),
-                                label: {
-                                    Text(task.title)
-                                }
+                            DisclosureGroup(
+                                content: { Text(task.desc) },
+                                label: { Text(task.title) }
                             )
                             .swipeActions{
                                 Button(action: {
@@ -39,10 +37,18 @@ struct TasksView: View {
                                     Image(systemName: "checkmark")
                                 })
                                 .tint(.green)
+                                
+                                NavigationLink(
+                                    destination: TaskEditorView(task: task),
+                                    label: {
+                                        Image(systemName: "pencil")
+                                    }
+                                )
                             }
                         }
                     }
-                }.toolbar{
+                }
+                .toolbar{
                     ToolbarItem(placement: .principal){
                         Text("Tasks")
                     }
