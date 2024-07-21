@@ -20,6 +20,10 @@ class TaskOperations{
         context.insert(task)
     }
     
+    func addTask(_ task: TaskItemModel) {
+        context.insert(task)
+    }
+    
     func deleteTask(_ task: TaskItemModel) {
         context.delete(task)
     }

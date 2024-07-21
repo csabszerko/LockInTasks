@@ -16,6 +16,10 @@ struct TaskEditorView: View {
     }
     
     @Environment(\.modelContext) private var context
+    private var taskOperations: TaskOperations {
+        TaskOperations(context: context)
+    }
+    
     @Environment(\.dismiss) private var dismiss
     
     @State private var title = ""
@@ -36,16 +40,21 @@ struct TaskEditorView: View {
                         TextEditor(text: $desc).frame(minHeight: 100).padding(.leading, -5)
                     }
                 }
-                Button(action: {
-                    
-                }, label: {
-                    HStack{
-                        Spacer()
-                        Text("Delete").tint(.red)
-                        Spacer()
-                    }
-                    
-                })
+                if let task {
+                    Button(action: {
+                        withAnimation{
+                            taskOperations.deleteTask(task)
+                            dismiss()
+                        }
+                    }, label: {
+                        HStack{
+                            Spacer()
+                            Text("Delete").tint(.red)
+                            Spacer()
+                        }
+                        
+                    })
+                }
             }
             .onAppear(){
                 if let task {
@@ -79,7 +88,7 @@ struct TaskEditorView: View {
         else{
             //we're creating a task so
             let newTask = TaskItemModel(title: title, desc: desc)
-            context.insert(newTask)
+            taskOperations.addTask(newTask)
         }
     }
 }
