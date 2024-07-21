@@ -13,6 +13,6 @@ struct LockInTasksApp: App {
     var body: some Scene {
         WindowGroup {
             TasksView()
-        }.modelContainer(for: TaskItemModel.self)
+        }.modelContainer(for: TaskItemModel.self, isAutosaveEnabled: true)
     }
 }

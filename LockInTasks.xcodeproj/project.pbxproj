@@ -15,6 +15,7 @@
 		54E348692C4C22950036576A /* TaskItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E348682C4C22950036576A /* TaskItemModel.swift */; };
 		54E3486B2C4C2DD60036576A /* CustomCheckBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E3486A2C4C2DD60036576A /* CustomCheckBoxView.swift */; };
 		54E3486F2C4C59A10036576A /* TaskOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E3486E2C4C59A10036576A /* TaskOperations.swift */; };
+		54E348732C4D31FB0036576A /* TaskEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E348722C4D31FB0036576A /* TaskEditorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		54E348682C4C22950036576A /* TaskItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskItemModel.swift; sourceTree = "<group>"; };
 		54E3486A2C4C2DD60036576A /* CustomCheckBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCheckBoxView.swift; sourceTree = "<group>"; };
 		54E3486E2C4C59A10036576A /* TaskOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskOperations.swift; sourceTree = "<group>"; };
+		54E348722C4D31FB0036576A /* TaskEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskEditorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				54E348602C4BE9C70036576A /* PopupView.swift */,
 				54E348662C4C20740036576A /* TasksView.swift */,
 				54E3486A2C4C2DD60036576A /* CustomCheckBoxView.swift */,
+				54E348722C4D31FB0036576A /* TaskEditorView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54E348732C4D31FB0036576A /* TaskEditorView.swift in Sources */,
 				54E348372C4ACBD10036576A /* LockInApp.swift in Sources */,
 				54E3486B2C4C2DD60036576A /* CustomCheckBoxView.swift in Sources */,
 				54E348692C4C22950036576A /* TaskItemModel.swift in Sources */,

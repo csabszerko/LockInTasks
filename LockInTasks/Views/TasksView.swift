@@ -20,55 +20,37 @@ struct TasksView: View {
     
     var body: some View {
         VStack{
-            HStack{
-                Spacer()
-                Button(action: {
-                    //popup to add task
-                    self.isPresented = true
-                }, label: {
-                    Text("add a note")
-                    Image(systemName: "square.and.pencil")
-                })
-                .sheet(isPresented: $isPresented) {
-                    PopupView(isPresented: self.$isPresented)
-                }
-            }.padding()
-            
-            List{
-                ForEach (tasks){ task in
-                    HStack{
-                        Toggle(isOn: Binding(
-                            get: { task.isCompleted },
-                            set: { checkValue in
-                                task.isCompleted = checkValue
-                                try? context.save()
+            NavigationStack{
+                List{
+                    ForEach (tasks){ task in
+                        if !task.isCompleted {
+                            NavigationLink(
+                                destination: TaskEditorView(task: task),
+                                label: {
+                                    Text(task.title)
+                                }
+                            )
+                            .swipeActions{
+                                Button(action: {
+                                    withAnimation(.bouncy){
+                                        task.isCompleted = true
+                                    }
+                                }, label: {
+                                    Image(systemName: "checkmark")
+                                })
+                                .tint(.green)
                             }
-                        ), label: {
-                            Text(task.title)
-                        })
-                        .toggleStyle(CustomCheckBoxView())
+                        }
                     }
-                    .contentShape(Rectangle())
-                    .onTapGesture {
-                        task.isCompleted.toggle()
-                        try? context.save()
+                }.toolbar{
+                    ToolbarItem(placement: .principal){
+                        Text("Tasks")
                     }
-                    .swipeActions{
-                        Button(action: {
-                            withAnimation{
-                                taskOperations.deleteTask(task)
-                            }
-                        }, label: {
-                            Image(systemName: "trash")
+                    
+                    ToolbarItem(placement: .confirmationAction){
+                        NavigationLink(destination: TaskEditorView(task: nil), label: {
+                            Text("Add")
                         })
-                        .tint(.red)
-                        
-                        Button(action: {
-                            taskOperations.addTask(title: "sample", description: "sample")
-                        }, label: {
-                            Image(systemName: "square.and.pencil")
-                        })
-                        .tint(.yellow)
                     }
                 }
             }
