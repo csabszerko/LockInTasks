@@ -11,17 +11,15 @@ struct TaskRowView: View {
     var task: TaskItemModel
     
     var body: some View {
-        if !task.isCompleted {
-            Group{
-                if task.desc.isEmpty {
-                    Text(task.title).swipeMenu(task)
-                }
-                else{
-                    DisclosureGroup(
-                        content: { Text(task.desc).foregroundColor(.secondary).font(.caption) },
-                        label: { Text(task.title).swipeMenu(task) }
-                    )
-                }
+        Group{
+            if task.desc.isEmpty {
+                Text(task.title).swipeMenu(task)
+            }
+            else{
+                DisclosureGroup(
+                    content: { Text(task.desc).foregroundColor(.secondary).font(.caption) },
+                    label: { Text(task.title).swipeMenu(task) }
+                )
             }
         }
     }

@@ -23,7 +23,9 @@ struct TaskListView: View {
             NavigationStack{
                 List{
                     ForEach (tasks){ task in
-                        TaskRowView(task: task)
+                        if(!task.isCompleted){
+                            TaskRowView(task: task)
+                        }
                     }
                 }
                 .toolbar{
@@ -34,6 +36,12 @@ struct TaskListView: View {
                     ToolbarItem(placement: .confirmationAction){
                         NavigationLink(destination: TaskEditorView(task: nil), label: {
                             Text("Add")
+                        })
+                    }
+                    
+                    ToolbarItem(placement: .cancellationAction){
+                        ShowSheetButtonView(buttonText: "History", sheetContent: {
+                            CompletedTasksView()
                         })
                     }
                 }

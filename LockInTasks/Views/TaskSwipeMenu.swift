@@ -13,21 +13,23 @@ struct TaskSwipeMenu: ViewModifier {
     func body(content: Content) -> some View {
         content
             .swipeActions{
-                Button(action: {
-                    withAnimation(.bouncy){
+                if(!task.isCompleted){ 
+                    Button(action: {
+                        withAnimation(){
                             task.isCompleted = true
-                    }
-                }, label: {
-                    Image(systemName: "checkmark")
-                })
-                .tint(.green)
-                
-                NavigationLink(
-                    destination: TaskEditorView(task: task),
-                    label: {
-                        Image(systemName: "pencil")
-                    }
-                )
+                        }
+                    }, label: {
+                        Image(systemName: "checkmark")
+                    })
+                    .tint(.green)
+                    
+                    NavigationLink(
+                        destination: TaskEditorView(task: task),
+                        label: {
+                            Image(systemName: "pencil")
+                        }
+                    )
+                }
             }
     }
 }

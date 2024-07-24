@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		545628632C5137BC00FBCBEF /* CompletedTasksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545628622C5137BC00FBCBEF /* CompletedTasksView.swift */; };
+		545628652C51397B00FBCBEF /* ShowSheetButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545628642C51397B00FBCBEF /* ShowSheetButtonView.swift */; };
 		54E348372C4ACBD10036576A /* LockInApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E348362C4ACBD10036576A /* LockInApp.swift */; };
 		54E3483B2C4ACBD20036576A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54E3483A2C4ACBD20036576A /* Assets.xcassets */; };
 		54E3483E2C4ACBD20036576A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54E3483D2C4ACBD20036576A /* Preview Assets.xcassets */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		545628622C5137BC00FBCBEF /* CompletedTasksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedTasksView.swift; sourceTree = "<group>"; };
+		545628642C51397B00FBCBEF /* ShowSheetButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowSheetButtonView.swift; sourceTree = "<group>"; };
 		54E348332C4ACBD10036576A /* LockInTasks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LockInTasks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54E348362C4ACBD10036576A /* LockInApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockInApp.swift; sourceTree = "<group>"; };
 		54E3483A2C4ACBD20036576A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -116,6 +120,8 @@
 				54E3486A2C4C2DD60036576A /* CustomCheckBoxView.swift */,
 				54E348722C4D31FB0036576A /* TaskEditorView.swift */,
 				54E348762C4D559C0036576A /* TaskSwipeMenu.swift */,
+				545628622C5137BC00FBCBEF /* CompletedTasksView.swift */,
+				545628642C51397B00FBCBEF /* ShowSheetButtonView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -191,8 +197,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				54E348732C4D31FB0036576A /* TaskEditorView.swift in Sources */,
+				545628632C5137BC00FBCBEF /* CompletedTasksView.swift in Sources */,
 				54E348372C4ACBD10036576A /* LockInApp.swift in Sources */,
 				54E348752C4D4FFE0036576A /* TaskRowView.swift in Sources */,
+				545628652C51397B00FBCBEF /* ShowSheetButtonView.swift in Sources */,
 				54E3486B2C4C2DD60036576A /* CustomCheckBoxView.swift in Sources */,
 				54E348692C4C22950036576A /* TaskItemModel.swift in Sources */,
 				54E3486F2C4C59A10036576A /* TaskOperations.swift in Sources */,
