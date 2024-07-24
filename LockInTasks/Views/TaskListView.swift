@@ -1,34 +1,43 @@
 //
-//  ContentView.swift
+//  TasksView.swift
 //  LockInTasks
 //
-//  Created by Csaba Kiss on 19/07/2024.
+//  Created by Csaba Kiss on 20/07/2024.
 //
 
 import SwiftUI
+import SwiftData
 
 struct TaskListView: View {
-    //    var body: some View {
-    //        VStack {
-    //            Image(systemName: "lock.fill")
-    //                .imageScale(.large).font(.system(size: 30))
-    //            Text("it's time to lock in").font(.system(.largeTitle))
-    //        }
-    //        .padding()
-    //    }
-    
     @State private var isPresented = false
     
+    @Environment(\.modelContext) private var context
+    private var taskOperations: TaskOperations {
+        TaskOperations(context: context)
+    }
+    
+    @Query private var tasks: [TaskItemModel]
+    
     var body: some View {
-        VStack {
-            Button(action: {
-                self.isPresented = true
-            }) {
-                Text("Show Popup")
+        VStack{
+            NavigationStack{
+                List{
+                    ForEach (tasks){ task in
+                        TaskRowView(task: task)
+                    }
+                }
+                .toolbar{
+                    ToolbarItem(placement: .principal){
+                        Text("Tasks")
+                    }
+                    
+                    ToolbarItem(placement: .confirmationAction){
+                        NavigationLink(destination: TaskEditorView(task: nil), label: {
+                            Text("Add")
+                        })
+                    }
+                }
             }
-        }
-        .sheet(isPresented: $isPresented) {
-            PopupView(isPresented: self.$isPresented)
         }
     }
 }

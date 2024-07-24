@@ -12,7 +12,7 @@ import SwiftData
 struct LockInTasksApp: App {
     var body: some Scene {
         WindowGroup {
-            TasksView()
+            TaskListView()
         }.modelContainer(for: TaskItemModel.self, isAutosaveEnabled: true)
     }
 }

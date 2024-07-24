@@ -11,7 +11,7 @@
 		54E3483B2C4ACBD20036576A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54E3483A2C4ACBD20036576A /* Assets.xcassets */; };
 		54E3483E2C4ACBD20036576A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54E3483D2C4ACBD20036576A /* Preview Assets.xcassets */; };
 		54E348612C4BE9C70036576A /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E348602C4BE9C70036576A /* PopupView.swift */; };
-		54E348672C4C20740036576A /* TasksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E348662C4C20740036576A /* TasksView.swift */; };
+		54E348672C4C20740036576A /* TaskListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E348662C4C20740036576A /* TaskListView.swift */; };
 		54E348692C4C22950036576A /* TaskItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E348682C4C22950036576A /* TaskItemModel.swift */; };
 		54E3486B2C4C2DD60036576A /* CustomCheckBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E3486A2C4C2DD60036576A /* CustomCheckBoxView.swift */; };
 		54E3486F2C4C59A10036576A /* TaskOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E3486E2C4C59A10036576A /* TaskOperations.swift */; };
@@ -26,7 +26,7 @@
 		54E3483A2C4ACBD20036576A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		54E3483D2C4ACBD20036576A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		54E348602C4BE9C70036576A /* PopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
-		54E348662C4C20740036576A /* TasksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksView.swift; sourceTree = "<group>"; };
+		54E348662C4C20740036576A /* TaskListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListView.swift; sourceTree = "<group>"; };
 		54E348682C4C22950036576A /* TaskItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskItemModel.swift; sourceTree = "<group>"; };
 		54E3486A2C4C2DD60036576A /* CustomCheckBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCheckBoxView.swift; sourceTree = "<group>"; };
 		54E3486E2C4C59A10036576A /* TaskOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskOperations.swift; sourceTree = "<group>"; };
@@ -111,7 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				54E348602C4BE9C70036576A /* PopupView.swift */,
-				54E348662C4C20740036576A /* TasksView.swift */,
+				54E348662C4C20740036576A /* TaskListView.swift */,
 				54E348742C4D4FFE0036576A /* TaskRowView.swift */,
 				54E3486A2C4C2DD60036576A /* CustomCheckBoxView.swift */,
 				54E348722C4D31FB0036576A /* TaskEditorView.swift */,
@@ -198,7 +198,7 @@
 				54E3486F2C4C59A10036576A /* TaskOperations.swift in Sources */,
 				54E348612C4BE9C70036576A /* PopupView.swift in Sources */,
 				54E348772C4D559C0036576A /* TaskSwipeMenu.swift in Sources */,
-				54E348672C4C20740036576A /* TasksView.swift in Sources */,
+				54E348672C4C20740036576A /* TaskListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +336,7 @@
 				DEVELOPMENT_TEAM = 7N5WSQ6GZR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Lock In";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -365,6 +366,7 @@
 				DEVELOPMENT_TEAM = 7N5WSQ6GZR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Lock In";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

@@ -15,7 +15,7 @@ struct TaskSwipeMenu: ViewModifier {
             .swipeActions{
                 Button(action: {
                     withAnimation(.bouncy){
-                        task.isCompleted = true
+                            task.isCompleted = true
                     }
                 }, label: {
                     Image(systemName: "checkmark")

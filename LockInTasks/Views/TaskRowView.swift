@@ -18,7 +18,7 @@ struct TaskRowView: View {
                 }
                 else{
                     DisclosureGroup(
-                        content: { Text(task.desc) },
+                        content: { Text(task.desc).foregroundColor(.secondary).font(.caption) },
                         label: { Text(task.title).swipeMenu(task) }
                     )
                 }
