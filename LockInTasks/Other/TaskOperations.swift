@@ -8,26 +8,21 @@
 import Foundation
 import SwiftData
 
-class TaskOperations{
-    private var context: ModelContext
+extension TaskItemModel{
     
-    init(context: ModelContext) {
-        self.context = context
-    }
-    
-    func addTask(title: String, description: String) {
+    static func addTask(title: String, description: String, context: ModelContext) {
         let task = TaskItemModel(title: title, desc: description)
         context.insert(task)
     }
     
-    func addTask(_ task: TaskItemModel) {
+    static func addTask(_ task: TaskItemModel, context: ModelContext) {
         context.insert(task)
     }
     
-    func deleteTask(_ task: TaskItemModel) {
+    static func deleteTask(_ task: TaskItemModel, context: ModelContext) {
         context.delete(task)
     }
     
-    func updateTask(_ task: TaskItemModel) {
+    static func updateTask(_ task: TaskItemModel, context: ModelContext) {
     }
 }
