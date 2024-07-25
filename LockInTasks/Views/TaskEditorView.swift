@@ -9,16 +9,13 @@ import SwiftUI
 
 struct TaskEditorView: View {
     
-    let task: TaskItemModel?
+    let task: TaskModel?
     
     private var editorTitle: String {
         task == nil ? "Add Task" : "Edit Task"
     }
     
     @Environment(\.modelContext) private var context
-    private var taskOperations: TaskOperations {
-        TaskOperations(context: context)
-    }
     
     @Environment(\.dismiss) private var dismiss
     
@@ -43,7 +40,7 @@ struct TaskEditorView: View {
                 if let task {
                     Button(action: {
                         withAnimation{
-                            taskOperations.deleteTask(task)
+                            TaskModel.deleteTask(task, context: context)
                             dismiss()
                         }
                     }, label: {
@@ -66,6 +63,7 @@ struct TaskEditorView: View {
                 ToolbarItem(placement: .principal){
                     Text(editorTitle)
                 }
+                
                 ToolbarItem(placement: .confirmationAction){
                     Button("Save"){
                         //save the changes and dismiss window
@@ -73,7 +71,7 @@ struct TaskEditorView: View {
                             save()
                             dismiss()
                         }
-                    }
+                    }.disabled($title.wrappedValue.isEmpty)
                 }
             }
         }
@@ -87,8 +85,8 @@ struct TaskEditorView: View {
         }
         else{
             //we're creating a task so
-            let newTask = TaskItemModel(title: title, desc: desc)
-            taskOperations.addTask(newTask)
+            let newTask = TaskModel(title: title, desc: desc)
+            TaskModel.addTask(newTask, context: context)
         }
     }
 }

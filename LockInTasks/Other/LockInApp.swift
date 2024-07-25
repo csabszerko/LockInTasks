@@ -10,9 +10,24 @@ import SwiftData
 
 @main
 struct LockInTasksApp: App {
+    let date = Calendar.current.startOfDay(for: Date())
+    let defaults = UserDefaults.standard
+    
+    @Environment(\.scenePhase) var scenePhase
+    
     var body: some Scene {
         WindowGroup {
             TaskListView()
-        }.modelContainer(for: TaskItemModel.self, isAutosaveEnabled: true)
+        }
+        .modelContainer(for: TaskModel.self, isAutosaveEnabled: true)
+        .onChange(of: scenePhase) { oldPhase, newPhase in
+                        if newPhase == .active {
+                            print("Active")
+                        } else if newPhase == .inactive {
+                            print("Inactive")
+                        } else if newPhase == .background {
+                            print("Background")
+                        }
+                    }
     }
 }

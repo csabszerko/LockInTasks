@@ -7,22 +7,23 @@
 
 import Foundation
 import SwiftData
+import SwiftUI
 
-extension TaskItemModel{
+extension TaskModel {
     
     static func addTask(title: String, description: String, context: ModelContext) {
-        let task = TaskItemModel(title: title, desc: description)
+        let task = TaskModel(title: title, desc: description)
         context.insert(task)
     }
     
-    static func addTask(_ task: TaskItemModel, context: ModelContext) {
+    static func addTask(_ task: TaskModel, context: ModelContext) {
         context.insert(task)
     }
     
-    static func deleteTask(_ task: TaskItemModel, context: ModelContext) {
+    static func deleteTask(_ task: TaskModel, context: ModelContext) {
         context.delete(task)
     }
     
-    static func updateTask(_ task: TaskItemModel, context: ModelContext) {
+    static func updateTask(_ task: TaskModel, context: ModelContext) {
     }
 }

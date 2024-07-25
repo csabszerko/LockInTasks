@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct TaskSwipeMenu: ViewModifier {
-    var task: TaskItemModel
+    var task: TaskModel
     
     func body(content: Content) -> some View {
         content
             .swipeActions{
-                if(!task.isCompleted){ 
+                if(!task.isCompleted){
                     Button(action: {
                         withAnimation(){
                             task.isCompleted = true
@@ -35,7 +35,7 @@ struct TaskSwipeMenu: ViewModifier {
 }
 
 extension View {
-    func swipeMenu(_ task: TaskItemModel) -> some View {
+    func swipeMenu(_ task: TaskModel) -> some View {
         modifier(TaskSwipeMenu(task: task))
     }
 }

@@ -14,7 +14,7 @@
 		54E3483E2C4ACBD20036576A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54E3483D2C4ACBD20036576A /* Preview Assets.xcassets */; };
 		54E348612C4BE9C70036576A /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E348602C4BE9C70036576A /* PopupView.swift */; };
 		54E348672C4C20740036576A /* TaskListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E348662C4C20740036576A /* TaskListView.swift */; };
-		54E348692C4C22950036576A /* TaskItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E348682C4C22950036576A /* TaskItemModel.swift */; };
+		54E348692C4C22950036576A /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E348682C4C22950036576A /* TaskModel.swift */; };
 		54E3486B2C4C2DD60036576A /* CustomCheckBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E3486A2C4C2DD60036576A /* CustomCheckBoxView.swift */; };
 		54E3486F2C4C59A10036576A /* TaskOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E3486E2C4C59A10036576A /* TaskOperations.swift */; };
 		54E348732C4D31FB0036576A /* TaskEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E348722C4D31FB0036576A /* TaskEditorView.swift */; };
@@ -31,7 +31,7 @@
 		54E3483D2C4ACBD20036576A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		54E348602C4BE9C70036576A /* PopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
 		54E348662C4C20740036576A /* TaskListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListView.swift; sourceTree = "<group>"; };
-		54E348682C4C22950036576A /* TaskItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskItemModel.swift; sourceTree = "<group>"; };
+		54E348682C4C22950036576A /* TaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
 		54E3486A2C4C2DD60036576A /* CustomCheckBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCheckBoxView.swift; sourceTree = "<group>"; };
 		54E3486E2C4C59A10036576A /* TaskOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskOperations.swift; sourceTree = "<group>"; };
 		54E348722C4D31FB0036576A /* TaskEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskEditorView.swift; sourceTree = "<group>"; };
@@ -90,8 +90,8 @@
 		54E348622C4C1AEF0036576A /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				54E348362C4ACBD10036576A /* LockInApp.swift */,
 				54E3486E2C4C59A10036576A /* TaskOperations.swift */,
+				54E348362C4ACBD10036576A /* LockInApp.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -99,7 +99,7 @@
 		54E348632C4C1AF50036576A /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				54E348682C4C22950036576A /* TaskItemModel.swift */,
+				54E348682C4C22950036576A /* TaskModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -202,7 +202,7 @@
 				54E348752C4D4FFE0036576A /* TaskRowView.swift in Sources */,
 				545628652C51397B00FBCBEF /* ShowSheetButtonView.swift in Sources */,
 				54E3486B2C4C2DD60036576A /* CustomCheckBoxView.swift in Sources */,
-				54E348692C4C22950036576A /* TaskItemModel.swift in Sources */,
+				54E348692C4C22950036576A /* TaskModel.swift in Sources */,
 				54E3486F2C4C59A10036576A /* TaskOperations.swift in Sources */,
 				54E348612C4BE9C70036576A /* PopupView.swift in Sources */,
 				54E348772C4D559C0036576A /* TaskSwipeMenu.swift in Sources */,

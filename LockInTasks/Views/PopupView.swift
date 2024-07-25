@@ -14,9 +14,6 @@ struct PopupView: View {
     @State private var secondInput: String  = ""
     
     @Environment(\.modelContext) private var context
-    private var taskOperations: TaskOperations {
-        TaskOperations(context: context)
-    }
     
     var body: some View {
         VStack {
@@ -56,7 +53,7 @@ struct PopupView: View {
             HStack{
                 Button(action: {
                     withAnimation{
-                        taskOperations.addTask(title: self.firstInput, description: self.secondInput)
+//                        TaskOperations.addTask(title: self.firstInput, description: self.secondInput)
                     }
                     self.isPresented = false
                 }){

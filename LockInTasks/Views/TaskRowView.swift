@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TaskRowView: View {
-    var task: TaskItemModel
+    var task: TaskModel
     
     var body: some View {
         Group{

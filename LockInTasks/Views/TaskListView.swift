@@ -12,20 +12,34 @@ struct TaskListView: View {
     @State private var isPresented = false
     
     @Environment(\.modelContext) private var context
-    private var taskOperations: TaskOperations {
-        TaskOperations(context: context)
-    }
     
-    @Query private var tasks: [TaskItemModel]
+    
+//    @Query(animation: .smooth) private var tasks: [TaskModel]
+    @Query(
+        filter: #Predicate<TaskModel> { task in
+            task.isCompleted == false
+        },
+        animation: .smooth
+    )
+    var incompleteTasks: [TaskModel]
+    
+    @Query(
+        filter: #Predicate<TaskModel> { task in
+            task.isCompleted == true
+        },
+        animation: .smooth
+    )
+    var completeTasks: [TaskModel]
+    
+    let date = Calendar.current.startOfDay(for: Date())
+    let defaults = UserDefaults.standard
     
     var body: some View {
         VStack{
             NavigationStack{
                 List{
-                    ForEach (tasks){ task in
-                        if(!task.isCompleted){
+                    ForEach (incompleteTasks){ task in
                             TaskRowView(task: task)
-                        }
                     }
                 }
                 .toolbar{
@@ -43,6 +57,15 @@ struct TaskListView: View {
                         ShowSheetButtonView(buttonText: "History", sheetContent: {
                             CompletedTasksView()
                         })
+                    }
+                }.onAppear(){
+                    //reset tasks every day
+                    let lastRun = defaults.object(forKey: "AppLastRun") as? Date
+                    if lastRun != date {
+                        for task in completeTasks{
+                            task.isCompleted = false
+                        }
+                        defaults.set(date, forKey: "AppLastRun")
                     }
                 }
             }

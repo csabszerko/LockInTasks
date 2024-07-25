@@ -10,23 +10,24 @@ import SwiftData
 
 struct CompletedTasksView: View {
     @Environment(\.modelContext) private var context
-    private var taskOperations: TaskOperations {
-        TaskOperations(context: context)
-    }
     
-    @Query private var tasks: [TaskItemModel]
+    //    @Query private var tasks: [TaskModel]
+    @Query(
+        filter: #Predicate<TaskModel> { task in
+            task.isCompleted == true
+        },
+        animation: .smooth
+    ) var completeTasks: [TaskModel]
     
     var body: some View {
         VStack{
             NavigationStack{
                 List{
-                    ForEach (tasks){ task in
-                        if(task.isCompleted){
-                            TaskRowView(task: task)
-                        }
+                    ForEach (completeTasks){ task in
+                        TaskRowView(task: task)
                     }.onDelete(perform: { indexSet in
                         for index in indexSet{
-                            context.delete(tasks[index])
+                            context.delete(completeTasks[index])
                         }
                     })
                 }
